@@ -12,35 +12,37 @@
   <label for="email">Enter CofC email address: </label><br>
   <input type="text" id="email" name="email"><br>
   <button onclick="validateEmail()">Submit</button>
+
+
+
+  <script>
+    function validateEmail() {
+      const end1 = "@g.cofc.edu";
+      const end2 = "@cofc.edu";
+      const email = document.getElementById("email").value;
+      
+      if (email.endsWith(end1) || email.endsWith(end2)) {
+        // let user make reservation
+        redirectToPage();
+        
+      } else {
+        // tell user to input a CofC email address
+        errorMessage();
+      }
+    }
+  
+    function redirectToPage() {
+      // reservation page
+      window.location.href="reservation.html";
+    }
+  
+    function errorMessage() {
+      // show error message
+      alert("Invalid email. Please input a valid CofC email address.");
+    }
+    
+  </script>
   
 </body>
-
-
-<script>
-  function validateEmail() {
-    const end1 = "@g.cofc.edu";
-    const end2 = "@cofc.edu";
-    
-    if (email.endsWith(end1) || email.endsWith(end2)) {
-      // let user make reservation
-      redirectToPage();
-      
-    } else {
-      // tell user to input a CofC email address
-      errorMessage();
-    }
-  }
-
-  function redirectToPage() {
-    // reservation page
-    window.location.href="reservation.html";
-  }
-
-  function errorMessage() {
-    // show error message
-    alert("Invalid email. Please input a valid CofC email address.");
-  }
-  
-</script>
 
 </html>
