@@ -26,18 +26,6 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
-.short-bubble {
-  background: #f2d3d8;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.long-bubble {
-  background: #f2e6e8;
-  border-radius: 8px;
-  padding: 10px;
-}
-
 table {
   width: 90%;
   margin-left: 40px;
@@ -54,4 +42,16 @@ td {
 
 tr:nth-child(even) td {
   text-align: left;
+}
+
+td.short-bubble {
+  background: #f2d3d8;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+td.long-bubble {
+  background: #f2e6e8;
+  border-radius: 8px;
+  padding: 10px;
 }
