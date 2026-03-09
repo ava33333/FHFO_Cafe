@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="style.css">
-
 <head>
+    <link rel="stylesheet" href="style.css">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservation Form</title>
@@ -12,13 +12,24 @@
   <header>
     <h1>Reservation Form</h1>
     <p>
-      You have selected [time] for the March 18th pop up café. 
+      You have selected: <span id="selected-time"></span>. <br>
+        <br>
       This table currently has X seats available. Please fill 
       out the information below to reserve your spot. Once you fill 
       out the form, a confirmation email will be sent with more details 
       about the event, including a cancellation link if you need to cancel.
     </p>
   </header>
+
+  <script>
+      const str = window.location.search;
+      const urlParam = new URLSearchParams(str);
+      
+      const time = urlParam.get('time');
+
+      document.getElementById("selected-time").innerText = time;
+      
+  </script>
 </body>
 
 
