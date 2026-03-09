@@ -1,0 +1,19 @@
+body {
+  background: #f5f5dd;
+  font-family: 
+}
+
+h1, h2 {
+  color: #8b4411;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #a57a5a;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
