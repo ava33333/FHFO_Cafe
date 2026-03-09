@@ -16,11 +16,31 @@
             <br>
           Please fill out the information below to reserve your spot. Once you fill 
           out the form, a confirmation email will be sent with more details 
-          about the event, including a cancellation link if you need to cancel.
+          about the event, including a cancellation link if you need to cancel.<br>
         </p>
-      </header>
-    
-      <script>
+
+        <form id="reservation-form">
+            <label for="name">Enter your first and last name: </label>
+            <input type="text" id="name" name="name"><br>
+        </form>
+
+        <form id="reservation-form">
+            <label for="partySize">How many people are in your party?</label>
+            <input type="radio" id="1" name="partySize" value="1">
+            <input type="radio" id="2" name="partySize" value="2">
+            <input type="radio" id="3" name="partySize" value="3">
+            <input type="radio" id="4" name="partySize" value="4">
+            <br>
+        </form>
+
+      <form id="reservation-form">
+          <label for="email">Please enter your CofC email address: </label>
+          <input type="text" id="email" name="email>
+          <br>
+      </form>
+  
+</div>
+        <script>
           const str = window.location.search;
           const urlParam = new URLSearchParams(str);
           
@@ -29,7 +49,6 @@
           document.getElementById("selected-time").innerText = time;
           
       </script>
-  </div>
 </body>
 
 
