@@ -1,11 +1,6 @@
-@font-face {
-  font-family: playfairDisplay;
-  src: url(https://fonts.google.com/specimen/Playfair+Display);
-}
-
 body {
   background: #fffbf1;
-  font-family: playfairDisplay;
+  font-family: Courier New, monospace;
 }
 
 h1, h2 {
