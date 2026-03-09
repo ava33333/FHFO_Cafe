@@ -52,6 +52,7 @@ td.short-bubble {
   border-radius: 8px;
   width: 30px;
   height: 45px;
+  margin: 1rem 30px;
 }
 
 td.long-bubble {
@@ -59,4 +60,6 @@ td.long-bubble {
   border-radius: 8px;
   width: 30px;
   height: 45px;
+  margin: 1rem 10px;
+
 }
