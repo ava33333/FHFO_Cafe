@@ -35,11 +35,11 @@ tr {
   border-bottom: 1px solid #ddd;
 }
 
-tr:nth-child(even) {
-  text-align: left;
-}
-
 td {
   text-align: center;
   padding: 8px;
+}
+
+tr:nth-child(even) td {
+  text-align: left;
 }
