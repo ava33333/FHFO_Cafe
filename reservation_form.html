@@ -22,21 +22,24 @@
         <form id="reservation-form">
             <label for="name">Enter your first and last name: </label>
             <input type="text" id="name" name="name"><br>
-        </form>
 
-        <form id="reservation-form">
             <label for="partySize">How many people are in your party?</label>
+            <label for="partySize">1</label>
             <input type="radio" id="1" name="partySize" value="1">
+            <label for="partySize">2</label>
             <input type="radio" id="2" name="partySize" value="2">
+            <label for="partySize">3</label>
             <input type="radio" id="3" name="partySize" value="3">
+            <label for="partySize">4</label>
             <input type="radio" id="4" name="partySize" value="4">
             <br>
-        </form>
 
-      <form id="reservation-form">
           <label for="email">Please enter your CofC email address: </label>
-          <input type="text" id="email" name="email>
+          <input type="email" id="email" name="email">
+          <p id="email-error" style="color:red; display: none;">Please enter a valid CofC email address.</p>
           <br>
+
+          <input type="button" value="Submit" onclick="checkEmail()">
       </form>
   
 </div>
@@ -47,6 +50,20 @@
           const time = urlParam.get('time');
     
           document.getElementById("selected-time").innerText = time;
+
+          function checkEmail() {
+              const email = document.getElementById("email").value;
+              
+              // if it is a valid cofc email
+              if (email.endsWith("@g.cofc.edu") || email.endsWith("@cofc.edu")) {
+                  document.getElementById("email-error").style.display = "none";
+                  submitForm();
+              } else { // otherwise give them an error message
+                document.getElementById("email-error").style.display = "block";
+              }
+          }
+
+        function submitForm() {}
           
       </script>
 </body>
