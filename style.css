@@ -47,11 +47,11 @@ tr:nth-child(even) td {
 td.short-bubble {
   background: #f2d3d8;
   border-radius: 8px;
-  padding: 10px;
+  padding: 30px;
 }
 
 td.long-bubble {
   background: #f2e6e8;
   border-radius: 8px;
-  padding: 10px;
+  padding: 30px;
 }
