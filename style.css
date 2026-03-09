@@ -50,11 +50,13 @@ td.short-bubble {
   font-weight: bold;
   background: #f2d3d8;
   border-radius: 8px;
-  padding: 30px;
+  width: 30px;
+  height: 45px;
 }
 
 td.long-bubble {
   background: #f2e6e8;
   border-radius: 8px;
-  padding: 30px;
+  width: 30px;
+  height: 45px;
 }
