@@ -29,11 +29,13 @@ header {
 .short-bubble {
   background: #f2d3d8;
   border-radius: 8px;
+  padding: 10px;
 }
 
 .long-bubble {
   background: #f2e6e8;
   border-radius: 8px;
+  padding: 10px;
 }
 
 table {
