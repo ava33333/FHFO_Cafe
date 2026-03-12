@@ -73,24 +73,11 @@
                 partySize: document.querySelector('input[name="partySize"]:checked').value
             };
 
-            const fetchResponse = fetch(
-                "https://script.google.com/macros/s/AKfycbwMWlv0xfXpywQAMvotA93mbYdhXSY7dVokDTHHNsYc2NFFUULIb2nYL2JEHHdxNmFegw/exec", 
-                {
-                method: "POST",
-                body: JSON.stringify(formData),
-                mode: "no-cors",
-                headers: {
-                    "Content-Type": "text/plain"
-            })
-                .then(response =>  response.json()).
-                then(data => {
-                if(data.status == "closed") {
-                    window.location.href = "reservation_unavailable.html";
-                } else {
-                    // show success message
-                    window.location.href = "reservation_success.html";
-                }
-            });
+            window.location.href = "https://script.google.com/macros/s/AKfycbxNea_YyhAY9Tvm19_fqAJLHLKyiMSQ-AhD0TX8VTBeU42J-zeMqOrCyBAYnXblQTI7kg/exec" + 
+              "?time=" + encodeURIComponent(time) + 
+              "&name=" + encodeURIComponent(formData.name) + 
+              "&email=" + encodeURIComponent(email) + 
+              "&partySize=" + encodeURIComponent(formData.partySize);
             
         }
           
