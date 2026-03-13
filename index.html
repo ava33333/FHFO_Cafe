@@ -49,9 +49,9 @@
         <tr>
           <td class="short-bubble">2:30 pm</td>
           <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
-          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
-          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
-          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table2-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table3-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table4-230pm"></span>/4 slots available</td>
         </tr>
     
         <tr>
@@ -90,7 +90,7 @@
     </div>
 
     <script>
-        window.onload = fetchFunction() {
+        window.onload = function() {
             // fetch availability data here
             fetch("https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec?action=getAvailability")
                 .then(response => {
@@ -107,8 +107,8 @@
                         const id = "table" + tableNumber + "-" + time.replace(":", "").replace(" ", "").toLowerCase();
                         document.getElementById(id).innerText = seatsAvailable;
                             
-                    }
-
+                    })
+                }
             }
     </script>
 </body>
