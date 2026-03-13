@@ -54,6 +54,7 @@ td.short-bubble {
   width: 30px;
   height: 45px;
   margin: 1rem 30px;
+  font-size: 14px;
 }
 
 td.long-bubble {
@@ -62,5 +63,5 @@ td.long-bubble {
   width: 30px;
   height: 45px;
   margin: 1rem 10px;
-
+  font-size: 14px;
 }
