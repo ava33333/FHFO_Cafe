@@ -22,10 +22,10 @@
         <!-- row one -->
         <tr>
           <td class="short-bubble">1:00 pm</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-100pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table2-100pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table3-100pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table4-100pm"></span>/4 slots available</td>
         </tr>
     
         <tr>
@@ -35,10 +35,10 @@
         <!-- row two -->
         <tr>
           <td class="short-bubble">1:45 pm</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-145pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table2-145pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table3-145pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table4-145pm"></span>/4 slots available</td>
         </tr>
     
         <tr>
@@ -48,10 +48,10 @@
         <!-- row three -->
         <tr>
           <td class="short-bubble">2:30 pm</td>
-          <td class="long-bubble"> 4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-230pm"></span>/4 slots available</td>
         </tr>
     
         <tr>
@@ -61,10 +61,10 @@
         <!-- row four -->
         <tr>
           <td class="short-bubble">3:15 pm</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
-          <td class="long-bubble">4/4 slots available</td>
+          <td class="long-bubble"> <span id="table1-315pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table2-315pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table3-315pm"></span>/4 slots available</td>
+          <td class="long-bubble"> <span id="table4-315pm"></span>/4 slots available</td>
         </tr>
     
         <tr>
@@ -88,6 +88,29 @@
                   redirected and asked to select another time<br></blockquote>
         </p>
     </div>
+
+    <script>
+        window.onload = fetchFunction() {
+            // fetch availability data here
+            fetch("https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec?action=getAvailability")
+                .then(response => {
+                    return response.json();
+                }) 
+                .then(data => {
+                    // work w data
+                      for(let i = 0; i < data.length; i++) {
+                        const time = data[i].time;
+                        const tableNumber = data[i].tableNumber;
+                        const seatsTaken = data[i].seatsTaken;
+                        const status = data[i].status;
+                        const seatsAvailable = (status == "closed") ? 0 : 4 - seatsTaken;
+                        const id = "table" + tableNumber + "-" + time.replace(":", "").replace(" ", "").toLowerCase();
+                        document.getElementById(id).innerText = seatsAvailable;
+                            
+                    }
+
+            }
+    </script>
 </body>
 
 </html>
