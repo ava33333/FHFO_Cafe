@@ -45,15 +45,12 @@ td {
   width: auto;
 }
 
-tr:nth-child(even) td {
-  text-align: left;
-}
 
 td.short-bubble {
   font-weight: bold;
   background: #f2d3d8;
   border-radius: 8px;
-  width: 30px;
+  width: auto;
   height: 45px;
   margin: 1rem 30px;
 }
