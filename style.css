@@ -24,13 +24,13 @@ header {
   margin: 1rem 30px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  overflow: hidden;
 }
 
 table {
-  width: 90%;
-  font-size: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  table-layout: fixed;
+  font-size: 18px;
 }
 
 tr {
@@ -38,6 +38,8 @@ tr {
 }
 
 td {
+  word-break: break-word;
+  overflow-wrap: break-word;
   text-align: center;
   padding: 8px;
 }
