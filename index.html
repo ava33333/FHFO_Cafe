@@ -93,15 +93,40 @@
                 }) 
                 .then(data => {
                     // work w data
+                    let time1Full = 0;
+                    let time2Full = 0;
+                    let time3Full = 0;
+                    let time4Full = 0;
+                    
                       for(let i = 0; i < data.length; i++) {
-                        const time = data[i].time;
-                        const tableNumber = data[i].tableNumber;
-                        const seatsTaken = data[i].seatsTaken;
-                        const status = data[i].status;
-                        const seatsAvailable = (status == "closed") ? 0 : 4 - seatsTaken;
-                        const id = "table" + tableNumber + "-" + time.replace(":", "").replace(" ", "").toLowerCase();
-                        document.getElementById(id).innerText = seatsAvailable;  
+                          const time = data[i].time;
+                          const tableNumber = data[i].tableNumber;
+                          const seatsTaken = data[i].seatsTaken;
+                          const status = data[i].status;
+                          const seatsAvailable = (status == "closed") ? 0 : 4 - seatsTaken;
+                          const id = "table" + tableNumber + "-" + time.replace(":", "").replace(" ", "").toLowerCase();
+                          document.getElementById(id).innerText = seatsAvailable;
+                          
+                          if (time == "1:00 PM" && status == "closed") {
+                              time1Full++;
+                          } else if (time == "1:45 PM" && status == "closed") {
+                              time2Full++;
+                          } else if (time == "2:30 PM" && status == "closed") {
+                              time3Full++;
+                          } else if (time == "3:15 PM" && status == "closed") {
+                              time4Full++;
+                          }
                     } 
+                    // hiding link
+                    if (time1Full == 4) {
+                        document.getElementById("select-100pm").style.display = "none";
+                    } else if (time2Full == 4) {
+                        document.getElementById("select-145pm").style.display = "none";
+                    } else if (time3Full == 4) {
+                        document.getElementById("select-230pm").style.display = "none";
+                    } else if (time4Full == 4) {
+                        document.getElementById("select-315pm").style.display = "none";
+                    }
                 });
                 }
     </script>
