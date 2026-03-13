@@ -30,6 +30,7 @@ table {
   width: 100%;
   font-size: 18px;
   border-collapse: separate;
+  border-radius: 5px;
 }
 
 tr {
