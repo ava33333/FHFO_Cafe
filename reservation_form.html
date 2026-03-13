@@ -38,7 +38,7 @@
 
           <label for="email">Please enter your CofC email address: </label>
           <input type="email" id="email" name="email">
-          <p id="email-error" style="color:red; display: none;">Please enter a valid CofC email address.</p>
+          <p id="email-error" style="color:red; display: none;"><strong>Please enter a valid CofC email address.</strong></p>
           <br>
 
           <input type="button" value="Submit" onclick="checkEmail()">
@@ -72,8 +72,6 @@
                 email: document.getElementById("email").value,
                 partySize: document.querySelector('input[name="partySize"]:checked').value
             };
-
-            console.log(formData);
             
             window.location.href = "https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec" + 
               "?time=" + encodeURIComponent(time) + 
