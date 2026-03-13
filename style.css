@@ -65,8 +65,3 @@ td.long-bubble {
   height: 45px;
   margin: 1rem 10px;
 }
-tr td[colspan] {
-  text-align: left;
-  padding-top: 6px;
-  padding-bottom: 12px;
-}
