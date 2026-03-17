@@ -41,7 +41,10 @@
           <p id="email-error" style="color:red; display: none;"><strong>Please enter a valid CofC email address.</strong></p>
           <br>
 
-          <input type="button" value="Submit" onclick="checkEmail()">
+          <p id="form-error" style="color:red; display:none;">
+              <strong>Please fill out all fields before submitting.</strong></p>
+          
+            <input type="button" value="Submit" onclick="checkEmail()">
       </form>
   
 </div>
@@ -66,12 +69,18 @@
           }
 
         function submitForm() {
+            const partySizeInput = document.querySelector('input[name="partySize"]:checked');
             const formData = {
                 time : time,
                 name: document.getElementById("name").value,
                 email: document.getElementById("email").value,
-                partySize: document.querySelector('input[name="partySize"]:checked').value
+                partySize: partySizeIniput ? partySizeInput.value : null
             };
+
+            if(!formData.name || !formData.partySize || !formData.email) {
+                document.getElementById("form-error").style.display = "block";
+                return;
+            }
             
             window.location.href = "https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec" + 
               "?time=" + encodeURIComponent(time) + 
