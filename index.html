@@ -102,6 +102,7 @@
                           const status = data[i].status;
                           const seatsAvailable = (status == "closed") ? 0 : 4 - seatsTaken;
                           const id = "table" + tableNumber + "-" + time.replace(":", "").replace(" ", "").toLowerCase();
+                          console.log(id);
                           document.getElementById(id).innerText = seatsAvailable;
                           
                           if (time == "4:00 PM" && status == "closed") {
