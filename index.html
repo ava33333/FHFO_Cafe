@@ -82,13 +82,13 @@
     </div>
 
     <script>
-        const now = new Date();
-        const closeTime = new Date("March 24, 2026 22:00:00");
-        if (now > closeTime) {
-            window.location.href = "reservations_closed.html";
-        }
         
         window.onload = function() {
+            const now = new Date();
+            const closeTime = new Date("March 24, 2026 22:00:00");
+            if (now > closeTime) {
+                window.location.href = "reservations_closed.html";
+            }
             // fetch availability data here
             fetch("https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec?action=getAvailability")
                 .then(response => {
