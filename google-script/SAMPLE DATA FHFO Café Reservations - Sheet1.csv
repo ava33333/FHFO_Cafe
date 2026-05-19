@@ -1,9 +1,0 @@
-Table Number,Status (confirmed?),Name,Party Size,Email,Reservation Time,Timestamp,
-1,confirmed,Jane Doe,3,janedoe@example.com,4:00 PM,3/16/26 4:51 PM,FALSE
-2,confirmed,Jane Doe,1,janedoe@example.com,5:00 PM,3/17/26 4:51 PM,FALSE
-4,confirmed,Jane Doe,3,janedoe@example.com,4:45 PM,3/15/26 8:14 PM,FALSE
-1,confirmed,Jane Doe,1,janedoe@example.com,5:30 PM,3/18/2026 19:13:31,FALSE
-1,confirmed,Jane Doe,2,janedoe@example.com,6:30 PM,3/19/2026 19:13:31,FALSE
-2,confirmed,Jane Doe,3,janedoe@example.com,6:15 PM,3/20/2026 12:21:25,FALSE
-3,confirmed,Jane Doe,4,janedoe@example.com,7:15 PM,3/21/2026 12:21:25,FALSE
-4,confirmed,Jane Doe,2,janedoe@example.com,8:15 PM,3/22/2026 12:21:25,FALSE
