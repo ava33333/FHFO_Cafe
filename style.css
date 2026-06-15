@@ -60,3 +60,7 @@ td.long-bubble {
   width: 30%;
   height: 45px;
 }
+
+a[id^="select-"] {
+    display: none;
+}
