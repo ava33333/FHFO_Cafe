@@ -71,7 +71,7 @@
         <tr>
           <td class="short-bubble">6:15 pm</td>
           <td class="long-bubble"><strong>Table 1: </strong><span id="table1-615pm"></span>/4 seats left</td>
-          <td class="long-bubble"><strong>Table 2: </strong><span id="table2-615pm"></span>/4 seats left</td>
+          <td class="long-bubble"><strong>Table 2: </strong><span id="table2-615pm"></span>/4 seats left</td>h
         </tr>
         <tr>
           <td><a id="select-615pm" href="reservation_form.html?time=6:15 PM">Select this time</a></td>
@@ -94,7 +94,7 @@
             //}
             
             // fetch availability data here
-            fetch("url")
+            fetch("https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec?action=getAvailability")
                 .then(response => {
                     return response.json();
                 }) 
