@@ -94,7 +94,7 @@ function email(email_address, time, name) {
     htmlBody: "<h1>Your reservation is confirmed!</h1><p>We will see you at the French House on March 25th!<br><br><strong>Reservation details:</strong><br>Date: Wednesday, March 25th<br><br>Time: " + time + 
     "<br><br>Reservation Name: " 
     + name + 
-    "<br><br>Address: 6 Bull St, Charleston, SC 29401 <br><br>Thank you for making a reservation with FHFO! If you need to change or cancel your reservation, please reach out to Ava McDonald (email@email.address)</p>"});
+    "<br><br>Address: address <br><br>Thank you for making a reservation with FHFO! If you need to change or cancel your reservation, please reach out to Ava McDonald (email@email.address)</p>"});
 
 }
 
@@ -161,7 +161,7 @@ function sendReminderEmail(matrix) {
       matrix[i].partySize2 + 
       "<strong><br><br>Your reservations will be treated as one reservation for " +
       + (parseInt(matrix[i].partySize1) + parseInt(matrix[i].partySize2))+
-      " people.</strong><br><br>Address: 6 Bull St, Charleston, SC 29401 <br><br>We look forward to seeing you today! If there is a mistake with your reservation or you need to cancel, please reach out to Ava McDonald (email@email.address)<br><br>- French House and Friends Team</p>"});
+      " people.</strong><br><br>Address: address <br><br>We look forward to seeing you today! If there is a mistake with your reservation or you need to cancel, please reach out to Ava McDonald (email@email.address)<br><br>- French House and Friends Team</p>"});
 
     } 
     else { // if person has one reservation
@@ -175,7 +175,7 @@ function sendReminderEmail(matrix) {
       + matrix[i].name + 
       "<br><br>Party Size: " +
       matrix[i].partySize + 
-      "<br><br>Address: 6 Bull St, Charleston, SC 29401 <br><br>We look forward to seeing you today! If there is a mistake with your reservation or you need to cancel, please reach out to Ava McDonald (email@email.address)<br><br>- French House and Friends Team</p>"});   
+      "<br><br>Address: address <br><br>We look forward to seeing you today! If there is a mistake with your reservation or you need to cancel, please reach out to Ava McDonald (email@email.address)<br><br>- French House and Friends Team</p>"});   
     }
 
     Utilities.sleep(1000);
