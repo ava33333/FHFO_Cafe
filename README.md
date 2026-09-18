@@ -2,6 +2,8 @@
 A lightweight, serverless reservation system built for a one-time Parisian café pop-up event hosted by the **French House and Friends Organization (FHFO)** at the College of Charleston. The event featured made-to-order French crepes (savory and sweet) and café drinks (lattes, espresso, tea, etc.).
 🔗 **[Live Demo](https://ava33333.github.io/FHFO_Cafe/)**
 > Note: Reservations are closed. The site is in demo-only mode.
+
+> Claude Code was used to update the site for demo mode.
 ---
 ## Overview
 Guests could visit the site, view real-time table availability across four time slots, and submit a reservation for their party. The backend was handled entirely through a **Google Apps Script** web app connected to a **Google Sheet**, with no traditional server required.
