@@ -59,14 +59,17 @@
 
           function checkEmail() {
               const email = document.getElementById("email").value;
-              
-              // if it is a valid cofc email
-              if (email.endsWith("@g.cofc.edu") || email.endsWith("@cofc.edu")) {
-                  document.getElementById("email-error").style.display = "none";
-                  submitForm();
-              } else { // otherwise give them an error message
-                document.getElementById("email-error").style.display = "block";
-              }
+
+              // CofC email restriction disabled for demo mode — uncomment to re-enable for a real event
+              // if (email.endsWith("@g.cofc.edu") || email.endsWith("@cofc.edu")) {
+              //     document.getElementById("email-error").style.display = "none";
+              //     submitForm();
+              // } else { // otherwise give them an error message
+              //   document.getElementById("email-error").style.display = "block";
+              // }
+
+              document.getElementById("email-error").style.display = "none";
+              submitForm();
           }
 
         function submitForm() {
@@ -82,13 +85,16 @@
                 document.getElementById("form-error").style.display = "block";
                 return;
             }
-            
-            window.location.href = "https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec" + 
-              "?time=" + encodeURIComponent(time) + 
-              "&name=" + encodeURIComponent(formData.name) + 
-              "&email=" + encodeURIComponent(formData.email) + 
-              "&partySize=" + encodeURIComponent(formData.partySize);
-            
+
+            // Real submission to Google Apps Script backend — uncomment to re-enable for a real event
+            // window.location.href = "https://script.google.com/macros/s/AKfycbz61n1G0bfjoTQ07vv6i1E2cQPNdM70dZqHQVG0So3K-SiGG1MBNb7Ew_S3gNDok0Gkbg/exec" +
+            //   "?time=" + encodeURIComponent(time) +
+            //   "&name=" + encodeURIComponent(formData.name) +
+            //   "&email=" + encodeURIComponent(formData.email) +
+            //   "&partySize=" + encodeURIComponent(formData.partySize);
+
+            // Demo mode: skip real submission
+            window.location.href = "reservation_demo.html";
         }
           
       </script>
